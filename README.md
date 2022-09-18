@@ -8,9 +8,9 @@
 ## The transformer network's positional embedding and encoding are a "hack" because of the following: 
 
 
-If you assign a embedding vector $a_{j}$ to the English word "Hello", then, for every positional embedding or encoding $p_i$ you will have, 
+If you assign a embedding vector $a(j)$ to the English word "Hello", then, for every positional embedding or encoding $p_i$ you will have, 
 
-$$a'_{j,1} = a_{j} + p_{1}, a'_{j,2} = a_j + p_{2}, ..., a'_{j, n} = a_j + p_n$$ 
+$$a'(j,1) = a(j) + p_1, a'(j,2) = a(j) + p_{2}, ..., a'(j, n) = a(j) + p_n$$ 
 
 Do you see that we don't have one embedding vector for each word, instead we have many? 
 
