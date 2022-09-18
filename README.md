@@ -2,7 +2,7 @@
 
 *Sreram K (sreramk26@gmail.com)*
 
-*Date: 29-08-2022*
+*Date: 18-09-2022*
 
 
 ## The transformer network's positional embedding and encoding are a "hack" because of the following: 
