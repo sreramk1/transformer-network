@@ -18,7 +18,7 @@ Instead of having one embedding vector for "Hello", we now have multiple vectors
 
 LSTM and other recurrent neural networks don't have this problem. They deal with the **actual** embeddings instead of encoded embeddings. So, you precisely have one embedding vector for the word "hello" for every position!
 
-**Having a different vector for every position of a specific word, might cause the model to memorize the word along with its position. So that's why OpenAI's GPT-3 is just a compressed information storage with an advanced form of indexing (of a kind we have never seen before).**
+*Having a different vector for every position of a specific word, might cause the model to memorize the word along with its position. So that's why OpenAI's GPT-3 is just a compressed information storage with an advanced form of indexing (of a kind we have never seen before).*
 
 ## Let's run through the math to see how embeddings and encodings behave:
 
