@@ -12,13 +12,13 @@ If you assign a embedding vector $a_{j}$ to the English word "Hello", then, for 
 
 Do you see that we don't have one embedding vector for each word, instead we have many? 
 
-**So if the network does not see all the possible positional embeddings/encodings of a word, then it wouldn't have leaned to properly associate the word "Hello" with the other words in the sentence.**
+**So if the network does not see all the possible positional embeddings/encodings of the word, then it wouldn't have leaned to properly associate the word "Hello" with the other words in the sentence.**
 
 Instead of having one embedding vector for "Hello", we now have multiple vectors! "Hello" at a different position acts like a different embedding vector. 
 
 LSTM and other recursive neural networks don't have this problem. They deal with the **actual** embeddings instead of encoded embeddings. So, you precisely have one embedding vector for the word "hello" for every position!
 
-## Detailed explanation:
+## Let's run through the math to see how embeddings and encodings behave:
 
 Let me show you why transformer network's positional embedding and encoding are just a hack by running through their math. 
 
