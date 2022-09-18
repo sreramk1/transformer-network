@@ -74,3 +74,5 @@ The same word in the sentence will have more than one embedding for each positio
 
 This is why it feels like a hack! The word "Hello" in English, must not not be represented differently based on its position in the sentence. 
 
+Note: whatever I said will also be valid if you are using multiple attention heads. Though, there might be slight changes. 
+
