@@ -12,7 +12,7 @@ If you assign a embedding vector $a(j)$ to the English word "Hello", then, for e
 
 $$a'(j,1) = a(j) + p_1, a'(j,2) = a(j) + p_{2}, ..., a'(j, n) = a(j) + p_n$$ 
 
-Do you see that we don't have one embedding vector for each word, instead we have many? 
+Do you see that we don't have one embedding vector for each word, instead we have many? We have a different embedding vector for each word at every position!
 
 **So if the network does not see all the possible positional embeddings/encodings of the word, then it wouldn't have leaned to properly associate the word "Hello" with the other words in the sentence.**
 
