@@ -20,13 +20,6 @@ LSTM and other recursive neural networks don't have this problem. They deal with
 
 ## Detailed explanation:
 
-<!-- When you add the embedding of a word $x_i$ at position $i$ in the input sentence, with a positional embedding or encoding vector $p_i$, and apply a non-linear operation to it (like softmax), we get an entirely new vector $x'_i$ which cannot be easily reversed to obtain $x_i$.   
-
-So why is this a problem? 
-
-The network does not see $x_i$, but it instead sees $x'_i$ which is like an entirely new embedding vector. For example, if you assign a embedding vector $a_{j}$ to the English word "Hello", then after the softmax operation that follows  -->
-
-
 Let me show you why transformer network's positional embedding and encoding are just a hack by running through their math. 
 
 Let $\vec{x_i}$ be the embedding vector of the word $i$ in the input sentence. 
@@ -74,9 +67,4 @@ When you *do* introduce softmax for its non-linearity and its ability to serve a
 The same word in the sentence will have more than one embedding for each position. And this might cause the model to treat $a_{i} + p_{j}$ and $a_{i} + p_{k}$ differently. Where, $a_{i}$ is an embedding of a specific English word. And $p_{i}$ and $p_{k}$ are embedding or encoding vectors for position $j$ and $k$ respectively.
 
 This is why it feels like a hack! The word "Hello" in English, must not not be represented differently based on its position in the sentence. 
-
-<!-- $\vec{y_i} = \sum_{j = 1}^{M} \text{softmax}(h_{ij})\vec{v_j}$ &emsp;&emsp;... (10) -->
-
-
-<!-- Let $\vec{v_i}$ be a vector. Then,  $\vec{v_i} = \{v_{i, 1}, v_{i, 2}, ..., v_{i, n}\}$ if $n$ is the number of dimensions of $\vec{v}$.  -->
 
