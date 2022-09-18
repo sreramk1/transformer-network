@@ -8,9 +8,9 @@
 ## The transformer network's positional embedding and encoding are a "hack" because of the following: 
 
 
-If you assign a embedding vector $a_{j}$ to the English word "Hello", then, for every positional embedding or encoding $p_i$ you will have, 
+If you assign a embedding vector $a(j)$ to the English word "Hello", then, for every positional embedding or encoding $p_i$ you will have, 
 
-$$a'_{j,1} = a_{j} + p_{1}, a'_{j,2} = a_j + p_{2}, ..., a'_{j, n} = a_j + p_n$$ 
+$$a'(j,1) = a(j) + p_1, a'(j,2) = a(j) + p_{2}, ..., a'(j, n) = a(j) + p_n$$ 
 
 Do you see that we don't have one embedding vector for each word, instead we have many? 
 
@@ -73,4 +73,6 @@ When you *do* introduce softmax for its non-linearity and its ability to serve a
 The same word in the sentence will have more than one embedding for each position. And this might cause the model to treat $a_{i} + p_{j}$ and $a_{i} + p_{k}$ differently. Where, $a_{i}$ is an embedding of a specific English word. And $p_{i}$ and $p_{k}$ are embedding or encoding vectors for position $j$ and $k$ respectively.
 
 This is why it feels like a hack! The word "Hello" in English, must not not be represented differently based on its position in the sentence. 
+
+Note: whatever I said will also be valid if you are using multiple attention heads. Though, there might be slight changes. 
 
