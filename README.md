@@ -8,7 +8,9 @@
 ## The transformer network's positional embedding and encoding are a "hack" because of the following: 
 
 
-If you assign a embedding vector $a_{j}$ to the English word "Hello", then, for every positional embedding or encoding $p_i$ you will have, $a'_{j, 1} = a_{j} + p_{1}, a'_{j, 2} = a_j + p_{2}, ..., a'_{j, n} = a_j + p_{n}$. 
+If you assign a embedding vector $a_{j}$ to the English word "Hello", then, for every positional embedding or encoding $p_i$ you will have, 
+
+$$a'_{j, 1} = a_{j} + p_{1}, a'_{j, 2} = a_j + p_{2}, ..., a'_{j, n} = a_j + p_{n}$$ 
 
 Do you see that we don't have one embedding vector for each word, instead we have many? 
 
@@ -55,7 +57,9 @@ $\vec{k_i} = W_k (\vec{x'_i} + \vec{p_i} ) = W_k \vec{x'_i} + W_k\vec{p_i}$ &ems
 
 $\vec{v_i} = W_v (\vec{x'_i} + \vec{p_i} ) = W_v \vec{x'_i} + W_v\vec{p_i}$ &emsp;&emsp;... (8)
 
-$h_{ij} = \vec{q_i}^{T} \vec{k_j} =  (W_q \vec{x'_i})^T W_k\vec{x'_j} +  (W_q \vec{x'_i})^T W_k\vec{p_j} +  (W_q\vec{p_i})^TW_k \vec{x'_j} +    (W_q\vec{p_i})^TW_k\vec{p_j} $ &emsp;&emsp;... (9)
+$$h_{ij} = \vec{q_i}^{T} \vec{k_j} =  (W_q \vec{x'_i})^T W_k\vec{x'_j} +  (W_q \vec{x'_i})^T W_k\vec{p_j} +  (W_q\vec{p_i})^TW_k \vec{x'_j} +    (W_q\vec{p_i})^TW_k\vec{p_j} $$ 
+
+&emsp;&emsp;... (9)
 
 
 Now, (9) is finally used in (5).  
