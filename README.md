@@ -16,7 +16,7 @@ Do you see that we don't have one embedding vector for each word, instead we hav
 
 Instead of having one embedding vector for "Hello", we now have multiple vectors! "Hello" at a different position acts like a different embedding vector. 
 
-LSTM and other recursive neural networks don't have this problem. They deal with the **actual** embeddings instead of encoded embeddings. So, you precisely have one embedding vector for the word "hello" for every position!
+LSTM and other recurrent neural networks don't have this problem. They deal with the **actual** embeddings instead of encoded embeddings. So, you precisely have one embedding vector for the word "hello" for every position!
 
 ## Let's run through the math to see how embeddings and encodings behave:
 
