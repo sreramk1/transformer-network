@@ -64,7 +64,7 @@ $$h_{ij} = \vec{q_i}^{T} \vec{k_j} =  (W_q \vec{x'_i})^T W_k\vec{x'_j} +  (W_q \
 
 Now, (9) is finally used in (5).  
 
-Observe (9) carefully. If you write the sum $\sum_{i}\sum_{j}h_{i,j}$, then, you will have the **exact same value even if you jumble the position of the words in the input sentence.**
+Observe (9) carefully. The sum $\sum_{i}\sum_{j}h_{i,j}$,  will be the **exact same value even if you jumble the position of the words in the input sentence.**
 
 So, at this point, you are forced to introduce some kind of non-linearity. $\text{softmax}$ is non-linear and it makes perfect sense to be introduced at this point.
 
